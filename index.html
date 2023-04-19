@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css"/>
     <title>EV Comparison</title>
   </head>
   <body>
@@ -27,31 +27,70 @@
       </ul>
     </header>
 
-    <section>
-      <table class="table">
-        <tr>
-          <th id="select-vehicle-text">Select Vehicle</th>
-          <th>
-            <select class="form-control" id="select1">
-              <option value="0">-- Select Anyone --</option>
-            </select>
-          </th>
-          <th>
-            <select class="form-control" id="select1">
-              <option value="0">-- Select Anyone --</option>
-            </select>
-          </th>
-          <th>
-            <select class="form-control" id="select1">
-              <option value="0">-- Select Anyone --</option>
-            </select>
-          </th>
-        </tr>
-      </table>
-    </section>
+    <div class="container">
+      <div class="col-md-9 mx-auto">
+        <table class="table">
+          <tr class="bg-light">
+            <th id="select-vehicle-text">Select Vehicle</th>
+            <th>
+              <select class="form-control" id="select1" onchange="item1(this.value)">
+                <option value="0">-- Select Anyone --</option>
+              </select>
+            </th>
+            <th>
+              <select class="form-control" id="select2" onchange="item2(this.value)">
+                <option value="0">-- Select Anyone --</option>
+              </select>
+            </th>
+          </tr>
+
+          <tr>
+            <th>Product Image</th>
+            <td>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png" id="img1" alt="img1">
+            </td>
+            <td>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png" id="img2" alt="img2">
+            </td>
+          </tr>
+
+        </table>
+      </div>
+    </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
   </body>
 </html>
+
+<script src="data.js"></script>
+<script>
+  for(var i = 1; i < data.length; i++) {
+    document.getElementById("select1").innerHTML += `
+      <option value="${i}">${data[i].title}</option>
+    `;
+
+    document.getElementById("select2").innerHTML += `
+      <option value="${i}">${data[i].title}</option>
+    `;
+  }
+
+  function item1(a) {
+    var sel2 = document.getElementById("select2").value;
+    if(a != sel2) {
+      document.getElementById("img1").src = data[a].image;
+    }else{
+      document.getElementById("img1").src = data[0].image;
+    }
+  }
+
+  function item2(a) {
+    var sel1 = document.getElementById("select1").value;
+    if(a != sel1) {
+      document.getElementById("img2").src = data[a].image;
+    }else{ 
+      document.getElementById("img2").src = data[0  ].image;
+    }
+  }
+</script>
