@@ -29,15 +29,15 @@
 
     <div class="container">
       <div class="col-md-9 mx-auto">
-        <table class="table">
+        <table class="table text-center">
           <tr class="bg-light">
             <th id="select-vehicle-text">Select Vehicle</th>
-            <th>
+            <th width = "400px">
               <select class="form-control" id="select1" onchange="item1(this.value)">
                 <option value="0">-- Select Anyone --</option>
               </select>
             </th>
-            <th>
+            <th width = "400px">
               <select class="form-control" id="select2" onchange="item2(this.value)">
                 <option value="0">-- Select Anyone --</option>
               </select>
@@ -52,6 +52,24 @@
             <td>
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png" id="img2" alt="img2">
             </td>
+          </tr>
+
+          <tr>
+            <th>Product Price</th>
+            <td id="price1">N/A</td>
+            <td id="price2">N/A</td>
+          </tr>
+
+          <tr>
+            <th>Product Description</th>
+            <td id="desc1">N/A</td>
+            <td id="desc2">N/A</td>
+          </tr>
+
+          <tr>
+            <th>Product Brand</th> 
+            <td id="brand1">N/A</td>
+            <td id="brand2">N/A</td>
           </tr>
 
         </table>
@@ -80,8 +98,16 @@
     var sel2 = document.getElementById("select2").value;
     if(a != sel2) {
       document.getElementById("img1").src = data[a].image;
+      document.getElementById("price1").innerHTML = data[a].price;
+      document.getElementById("desc1").innerHTML = data[a].description;
+      document.getElementById("brand1").innerHTML = data[a].brand;
+
     }else{
+      documet.getElementById("select1").selectedIndex = 0;
       document.getElementById("img1").src = data[0].image;
+      document.getElementById("price1").innerHTML = "";
+      document.getElementById("desc1").innerHTML = "";
+      document.getElementById("brand1").innerHTML = "";
     }
   }
 
@@ -89,8 +115,15 @@
     var sel1 = document.getElementById("select1").value;
     if(a != sel1) {
       document.getElementById("img2").src = data[a].image;
+      document.getElementById("price2").innerHTML = data[a].price;
+      document.getElementById("desc2").innerHTML = data[a].description;
+      document.getElementById("brand2").innerHTML = data[a].brand;
     }else{ 
+      documet.getElementById("select2").selectedIndex = 0;
       document.getElementById("img2").src = data[0  ].image;
+      document.getElementById("price2").innerHTML = "";
+      document.getElementById("desc2").innerHTML = "";
+      document.getElementById("brand2").innerHTML = "";
     }
   }
 </script>

@@ -49,7 +49,7 @@ header ul li {
 header ul li a {
     text-decoration: none;
     padding: 6px 15px;
-    color: #0c4300;
+    /* color: #0c4300; */
     /* color: white; */
     border-radius: 20px;
 }
