@@ -72,6 +72,90 @@
             <td id="brand2">N/A</td>
           </tr>
 
+          <tr>
+            <th>Battery Capacity</th> 
+            <td id="capacity1">N/A</td>
+            <td id="capacity2">N/A</td>
+          </tr>
+
+          <tr>
+            <th>Maximum Power</th> 
+            <td id="pow1">N/A</td>
+            <td id="pow2">N/A</td>
+          </tr>
+
+          <tr>
+            <th>Maximum Torque</th> 
+            <td id="torque1">N/A</td>
+            <td id="torque2">N/A</td>
+          </tr>
+
+          <tr>
+            <th>Top Speed</th> 
+            <td id="speed1">N/A</td>
+            <td id="speed2">N/A</td>
+          </tr>
+
+          <tr>
+            <th>Seating Capacity</th> 
+            <td id="seats1">N/A</td>
+            <td id="seats2">N/A</td>
+          </tr>
+
+          <tr>
+            <th>Range</th> 
+            <td id="range1">N/A</td>
+            <td id="range2">N/A</td>
+          </tr>
+
+          <tr>
+            <th>Boot Space</th> 
+            <td id="boot1">N/A</td>
+            <td id="boot2">N/A</td>
+          </tr>
+
+          <tr>
+            <th>Body Type</th> 
+            <td id="bodyType1">N/A</td>
+            <td id="bodyType2">N/A</td>
+          </tr>
+
+          <tr>
+            <th>Charging Time</th> 
+            <td id="time1">N/A</td>
+            <td id="time2">N/A</td>
+          </tr>
+
+          <tr>
+            <th>Dimensions</th> 
+            <td id="dimensions1">N/A</td>
+            <td id="dimensions2">N/A</td>
+          </tr>
+
+          <tr>
+            <th>Weight</th> 
+            <td id="wt1">N/A</td>
+            <td id="wt2">N/A</td>
+          </tr>
+
+          <tr>
+            <th>Transmision Type</th> 
+            <td id="transmision1">N/A</td>
+            <td id="transmision2">N/A</td>
+          </tr>
+
+          <tr>
+            <th>Wheel Base</th> 
+            <td id="wheel1">N/A</td>
+            <td id="wheel2">N/A</td>
+          </tr>
+
+          <tr>
+            <th>Ground Clearance</th> 
+            <td id="ground1">N/A</td>
+            <td id="ground2">N/A</td>
+          </tr>
+
         </table>
       </div>
     </div>
@@ -101,6 +185,20 @@
       document.getElementById("price1").innerHTML = data[a].price;
       document.getElementById("desc1").innerHTML = data[a].description;
       document.getElementById("brand1").innerHTML = data[a].brand;
+      document.getElementById("capacity1").innerHTML = data[a].battery_capacity;
+      document.getElementById("pow1").innerHTML = data[a].max_power;
+      document.getElementById("torque1").innerHTML = data[a].max_torque;
+      document.getElementById("speed1").innerHTML = data[a].top_speed;
+      document.getElementById("seats1").innerHTML = data[a].seating_capacity;
+      document.getElementById("range1").innerHTML = data[a].range;
+      document.getElementById("boot1").innerHTML = data[a].boot_space;
+      document.getElementById("bodyType1").innerHTML = data[a].body_type;
+      document.getElementById("time1").innerHTML = data[a].charging_time;
+      document.getElementById("dimensions1").innerHTML = data[a].dimensions;
+      document.getElementById("wt1").innerHTML = data[a].weight;
+      document.getElementById("transmision1").innerHTML = data[a].transmission_type;
+      document.getElementById("wheel1").innerHTML = data[a].wheelbase;
+      document.getElementById("ground1").innerHTML = data[a].ground_clearance;
 
     }else{
       documet.getElementById("select1").selectedIndex = 0;
@@ -108,6 +206,20 @@
       document.getElementById("price1").innerHTML = "";
       document.getElementById("desc1").innerHTML = "";
       document.getElementById("brand1").innerHTML = "";
+      document.getElementById("capacity1").innerHTML = "";
+      document.getElementById("pow1").innerHTML = "";
+      document.getElementById("torque1").innerHTML = "";
+      document.getElementById("speed1").innerHTML = "";
+      document.getElementById("seats1").innerHTML = "";
+      document.getElementById("range1").innerHTML = "";
+      document.getElementById("boot1").innerHTML = "";
+      document.getElementById("bodyType1").innerHTML = "";
+      document.getElementById("time1").innerHTML = "";
+      document.getElementById("dimensions1").innerHTML = "";
+      document.getElementById("wt1").innerHTML = "";
+      document.getElementById("transmision1").innerHTML = "";
+      document.getElementById("wheel1").innerHTML = "";
+      document.getElementById("ground1").innerHTML = "";
     }
   }
 
@@ -118,12 +230,41 @@
       document.getElementById("price2").innerHTML = data[a].price;
       document.getElementById("desc2").innerHTML = data[a].description;
       document.getElementById("brand2").innerHTML = data[a].brand;
+      document.getElementById("capacity2").innerHTML = data[a].battery_capacity;
+      document.getElementById("pow2").innerHTML = data[a].max_power;
+      document.getElementById("torque2").innerHTML = data[a].max_torque;
+      document.getElementById("speed2").innerHTML = data[a].top_speed;
+      document.getElementById("seats2").innerHTML = data[a].seating_capacity;
+      document.getElementById("range2").innerHTML = data[a].range;
+      document.getElementById("boot2").innerHTML = data[a].boot_space;
+      document.getElementById("bodyType2").innerHTML = data[a].body_type;
+      document.getElementById("time2").innerHTML = data[a].charging_time;
+      document.getElementById("dimensions2").innerHTML = data[a].dimensions;
+      document.getElementById("wt2").innerHTML = data[a].weight;
+      document.getElementById("transmision2").innerHTML = data[a].transmission_type;
+      document.getElementById("wheel2").innerHTML = data[a].wheelbase;
+      document.getElementById("ground2").innerHTML = data[a].ground_clearance;
+
     }else{ 
       documet.getElementById("select2").selectedIndex = 0;
       document.getElementById("img2").src = data[0  ].image;
       document.getElementById("price2").innerHTML = "";
       document.getElementById("desc2").innerHTML = "";
       document.getElementById("brand2").innerHTML = "";
+      document.getElementById("capacity2").innerHTML = "";
+      document.getElementById("pow2").innerHTML = "";
+      document.getElementById("torque2").innerHTML = "";
+      document.getElementById("speed2").innerHTML = "";
+      document.getElementById("seats2").innerHTML = "";
+      document.getElementById("range2").innerHTML = "";
+      document.getElementById("boot2").innerHTML = "";
+      document.getElementById("bodyType2").innerHTML = "";
+      document.getElementById("time2").innerHTML = "";
+      document.getElementById("dimensions2").innerHTML = "";
+      document.getElementById("wt2").innerHTML = "";
+      document.getElementById("transmision2").innerHTML = "";
+      document.getElementById("wheel2").innerHTML = "";
+      document.getElementById("ground2").innerHTML = "";
     }
   }
 </script>
